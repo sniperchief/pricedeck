@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const WHATSAPP_LINK = 'https://wa.me/2348000000000'
+const WHATSAPP_LINK = 'https://wa.me/5551661013'
 
 function WhatsAppIcon() {
   return (
@@ -19,8 +19,8 @@ function HeroSection() {
           {/* Left - Text */}
           <div className="text-left">
             <p className="overline mb-4">AI-POWERED MARKET INTELLIGENCE</p>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6">
-              Know Market Price <span className="text-[#E8943A]">Before</span> <span className="text-[#E8943A] whitespace-nowrap">You Budget or Buy</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+              Know Market Price <span className="text-[#E8943A]">Before</span> <span className="text-[#E8943A]">You Budget or Buy</span>
             </h1>
             <p className="text-gray-600 text-lg mb-8 max-w-lg">
               PriceDeck shows you real commodity prices from markets across Nigeria — reported by market insiders and Verified by our agent
@@ -39,89 +39,12 @@ function HeroSection() {
             </a>
           </div>
           {/* Right - iPhone Mockup */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* iPhone Body */}
-              <div className="bg-[#1a1a1a] rounded-[55px] p-[14px] shadow-2xl w-[280px] h-[580px] border-[3px] border-[#2a2a2a]">
-                {/* Side Button */}
-                <div className="absolute -right-[5px] top-[140px] w-[3px] h-[80px] bg-[#2a2a2a] rounded-r-sm"></div>
-                {/* Volume Buttons */}
-                <div className="absolute -left-[5px] top-[120px] w-[3px] h-[35px] bg-[#2a2a2a] rounded-l-sm"></div>
-                <div className="absolute -left-[5px] top-[165px] w-[3px] h-[60px] bg-[#2a2a2a] rounded-l-sm"></div>
-
-                {/* Screen */}
-                <div className="bg-black rounded-[42px] h-full overflow-hidden relative">
-                  {/* Dynamic Island */}
-                  <div className="absolute top-[12px] left-1/2 -translate-x-1/2 w-[90px] h-[28px] bg-black rounded-full z-40"></div>
-
-                  {/* Status Bar + Header */}
-                  <div className="bg-[#075E54] pt-[50px] px-4 pb-3">
-                    <div className="flex justify-between text-white text-[11px] mb-3">
-                      <span>9:41</span>
-                      <div className="flex items-center gap-1">
-                        <svg className="w-4 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M2 17h2v4H2v-4zm4-5h2v9H6v-9zm4-4h2v13h-2V8zm4-4h2v17h-2V4zm4 7h2v10h-2V11z"/></svg>
-                        <svg className="w-6 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M17 4h3c.55 0 1 .45 1 1v14c0 .55-.45 1-1 1h-3V4zM2 6c0-1.1.9-2 2-2h12v16H4c-1.1 0-2-.9-2-2V6zm14 0v12h2V6h-2z"/></svg>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                      </svg> 
-                      <div className="w-10 h-10 bg-[#E8943A] rounded-full flex items-center justify-center">
-                        <span className="text-white font-bold text-sm">PriceDeck</span>
-                      </div> 
-                      <div className="flex-1">
-                        <p className="text-white font-semibold text-[15px]">PD</p>
-                        <p className="text-green-200 text-[12px]">online</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Chat Area */}
-                  <div className="bg-[#0b141a] px-4 py-5 h-[340px]" style={{backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23152033\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'}}>
-                    {/* User Message */}
-                    <div className="flex justify-end mb-4">
-                      <div className="bg-[#005c4b] text-white px-4 py-3 rounded-xl rounded-tr-sm shadow max-w-[85%]">
-                        <p className="text-[16px]">How much is rice in Ogbete?</p>
-                        <p className="text-[11px] text-green-200/70 text-right mt-2">10:32 AM</p>
-                      </div>
-                    </div>
-<br></br>
-                    {/* Bot Response */}
-                    <div className="flex justify-start">
-                      <div className="bg-[#202c33] text-white px-4 py-3 rounded-xl rounded-tl-sm shadow max-w-[92%]">
-                        <p className="text-[15px] font-semibold text-[#E8943A] mb-2">PriceDeck</p>
-                        <p className="text-[15px] mb-3">Rice (50kg) - Ogbete Market:</p>
-                        <div className="text-[15px] space-y-1">
-                          <p><span className="font-semibold">Local:</span> ₦72,000 – ₦75,000</p>
-                          <p><span className="font-semibold">Foreign:</span> ₦82,000 – ₦85,000</p>
-                        </div>
-                        <p className="text-[12px] text-gray-400 mt-3">Updated 15 mins ago</p>
-                        <p className="text-[11px] text-gray-400 text-right mt-1">10:32 AM</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Input Area */}
-                  <div className="bg-[#1f2c34] px-3 py-2 flex items-center gap-2">
-                    <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <div className="flex-1 bg-[#2a3942] rounded-full px-4 py-2">
-                      <p className="text-gray-500 text-[14px]">Message</p>
-                    </div>
-                    <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 15c1.66 0 2.99-1.34 2.99-3L15 6c0-1.66-1.34-3-3-3S9 4.34 9 6v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 15 6.7 12H5c0 3.42 2.72 6.23 6 6.72V22h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/>
-                    </svg>
-                  </div>
-
-                  {/* Home Indicator */}
-                  <div className="bg-[#1f2c34] pb-2 pt-1 flex justify-center">
-                    <div className="w-[120px] h-[4px] bg-white/30 rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="flex justify-center lg:justify-end mt-2 lg:mt-4">
+            <img
+              src="/images/phone_mockup.png"
+              alt="PriceDeck WhatsApp chat showing commodity prices"
+              className="max-w-none w-[450px] sm:w-[550px] md:w-[700px] lg:w-[850px] xl:w-[950px] h-auto drop-shadow-2xl"
+            />
           </div>
         </div>
       </div>

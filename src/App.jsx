@@ -5,7 +5,7 @@ import MarketPartners from './pages/MarketPartners'
 import About from './pages/About'
 import Privacy from './pages/Privacy'
 
-const WHATSAPP_LINK = 'https://wa.me/2348000000000'
+const WHATSAPP_LINK = 'https://wa.me/5551661013'
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
