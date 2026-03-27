@@ -74,11 +74,6 @@ body {
   border-radius: 8px;
   display: inline-block;
   text-decoration: none;
-  transition: background-color 0.2s ease;
-}
-
-.btn-primary:hover {
-  background-color: #333333;
 }
 
 .dark-card {

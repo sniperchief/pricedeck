@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import Home from './pages/Home'
 import MarketPartners from './pages/MarketPartners'
 import About from './pages/About'
@@ -9,12 +9,22 @@ const WHATSAPP_LINK = 'https://wa.me/15551661013'
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
 
-  const navLinks = [
-    { to: '/', label: 'Home' },
-    { to: '/about', label: 'About' },
-    { to: '/market-partners', label: 'Market Partners' },
-  ]
+  const handleSectionClick = (sectionId) => (e) => {
+    e.preventDefault()
+    setIsMenuOpen(false)
+
+    if (location.pathname === '/') {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      navigate('/')
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
+    }
+  }
 
   return (
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
@@ -28,15 +38,26 @@ function Navbar() {
 
           {/* Desktop Nav Links */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                className="text-sm text-gray-900 font-bold hover:opacity-70 transition-opacity"
-              >
-                {link.label}
-              </NavLink>
-            ))}
+            <NavLink
+              to="/"
+              className="text-sm text-gray-900 font-bold hover:text-[#E8943A] transition-colors"
+            >
+              Home
+            </NavLink>
+            <a
+              href="/#how-it-works"
+              onClick={handleSectionClick('how-it-works')}
+              className="text-sm text-gray-900 font-bold hover:text-[#E8943A] transition-colors cursor-pointer"
+            >
+              How It Works
+            </a>
+            <a
+              href="/#market-partners"
+              onClick={handleSectionClick('market-partners')}
+              className="text-sm text-gray-900 font-bold hover:text-[#E8943A] transition-colors cursor-pointer"
+            >
+              Market Partners
+            </a>
           </div>
 
           {/* Desktop CTA */}
@@ -84,16 +105,27 @@ function Navbar() {
         {isMenuOpen && (
           <div className="md:hidden pb-4">
             <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <NavLink
-                  key={link.to}
-                  to={link.to}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-sm text-gray-900 font-bold hover:opacity-70 transition-opacity"
-                >
-                  {link.label}
-                </NavLink>
-              ))}
+              <NavLink
+                to="/"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-sm text-gray-900 font-bold hover:text-[#E8943A] transition-colors"
+              >
+                Home
+              </NavLink>
+              <a
+                href="/#how-it-works"
+                onClick={handleSectionClick('how-it-works')}
+                className="text-sm text-gray-900 font-bold hover:text-[#E8943A] transition-colors cursor-pointer"
+              >
+                How It Works
+              </a>
+              <a
+                href="/#market-partners"
+                onClick={handleSectionClick('market-partners')}
+                className="text-sm text-gray-900 font-bold hover:text-[#E8943A] transition-colors cursor-pointer"
+              >
+                Market Partners
+              </a>
             </div>
           </div>
         )}
