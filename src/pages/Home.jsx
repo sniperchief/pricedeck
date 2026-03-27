@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const WHATSAPP_LINK = 'https://wa.me/5551661013'
+const WHATSAPP_LINK = 'https://wa.me/15551661013'
 
 function WhatsAppIcon() {
   return (
@@ -317,24 +317,24 @@ function FAQSection() {
   }
 
   return (
-    <section className="section-padding bg-white">
+    <section className="pt-20 md:pt-28 pb-[30px] bg-white">
       <div className="container-custom">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#20232D] mb-4">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#20232D] mb-8 md:mb-12">
             Frequently Asked Questions
           </h2>
-        
-          <div className="space-y-8">
+        <br></br>
+          <div>
             {faqs.map((faq, index) => (
-              <div key={index} className="border-b border-gray-200 pb-8">
+              <div key={index} className="border-b border-gray-200 pb-8 mb-12 pt-8">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex flex-col items-center justify-center py-4"
+                  className="w-full flex flex-row items-center justify-between py-4 gap-4"
                 >
-                  <span className="text-[#20232D] font-bold text-xl md:text-2xl tracking-wide">
+                  <span className="text-[#20232D] font-bold text-xl md:text-2xl tracking-wide text-left">
                     {index + 1}. {faq.question}
                   </span>
-                  <span className="text-[#E8943A] text-3xl mt-4">
+                  <span className="text-[#E8943A] text-3xl flex-shrink-0">
                     {openIndex === index ? '−' : '+'}
                   </span>
                 </button>

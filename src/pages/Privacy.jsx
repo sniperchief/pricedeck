@@ -4,11 +4,11 @@ export default function Privacy() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="max-w-[720px] mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#E8943A] mb-8">
               Privacy Policy
             </h1>
 
-            <div className="space-y-8 text-gray-600">
+            <div className="space-y-8 text-white font-bold text-lg leading-relaxed">
               <div>
                 <p className="mb-4">
                   Last updated: January 2025
@@ -19,7 +19,7 @@ export default function Privacy() {
               </div>
 
               <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-4">
+                <h2 className="text-xl font-bold text-[#E8943A] mb-4">
                   Information We Collect
                 </h2>
                 <p className="mb-4">
@@ -33,7 +33,7 @@ export default function Privacy() {
               </div>
 
               <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-4">
+                <h2 className="text-xl font-bold text-[#E8943A] mb-4">
                   How We Use Your Information
                 </h2>
                 <ul className="list-disc list-inside space-y-2 ml-4">
@@ -45,7 +45,7 @@ export default function Privacy() {
               </div>
 
               <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-4">
+                <h2 className="text-xl font-bold text-[#E8943A] mb-4">
                   What We Don't Do
                 </h2>
                 <ul className="list-disc list-inside space-y-2 ml-4">
@@ -56,7 +56,7 @@ export default function Privacy() {
               </div>
 
               <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-4">
+                <h2 className="text-xl font-bold text-[#E8943A] mb-4">
                   Market Partners
                 </h2>
                 <p>
@@ -65,16 +65,16 @@ export default function Privacy() {
               </div>
 
               <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-4">
+                <h2 className="text-xl font-bold text-[#E8943A] mb-4">
                   Data Retention
                 </h2>
                 <p>
-                  We retain your message history and price data to improve our service. You can request deletion of your data at any time by messaging us on WhatsApp or emailing hello@pricedeck.ng.
+                  We retain your message history and price data to improve our service. You can request deletion of your data at any time by messaging us on WhatsApp or emailing pricedeck.org@gmail.com.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-4">
+                <h2 className="text-xl font-bold text-[#E8943A] mb-4">
                   Your Rights
                 </h2>
                 <p className="mb-4">
@@ -89,7 +89,7 @@ export default function Privacy() {
               </div>
 
               <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-4">
+                <h2 className="text-xl font-bold text-[#E8943A] mb-4">
                   Security
                 </h2>
                 <p>
@@ -98,7 +98,7 @@ export default function Privacy() {
               </div>
 
               <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-4">
+                <h2 className="text-xl font-bold text-[#E8943A] mb-4">
                   Changes to This Policy
                 </h2>
                 <p>
@@ -107,13 +107,13 @@ export default function Privacy() {
               </div>
 
               <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-4">
+                <h2 className="text-xl font-bold text-[#E8943A] mb-4">
                   Contact Us
                 </h2>
                 <p>
                   If you have questions about this privacy policy or your data, contact us at{' '}
-                  <a href="mailto:hello@pricedeck.ng" className="text-[#25D366] hover:underline">
-                    hello@pricedeck.ng
+                  <a href="mailto:pricedeck.org@gmail.com" className="text-[#25D366] hover:underline">
+                  pricedeck.org@gmail.com
                   </a>
                 </p>
               </div>

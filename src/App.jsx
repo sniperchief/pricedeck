@@ -5,7 +5,7 @@ import MarketPartners from './pages/MarketPartners'
 import About from './pages/About'
 import Privacy from './pages/Privacy'
 
-const WHATSAPP_LINK = 'https://wa.me/5551661013'
+const WHATSAPP_LINK = 'https://wa.me/15551661013'
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -108,19 +108,19 @@ function Footer() {
       <div className="container-custom py-8 md:py-12 lg:py-16">
         <div className="flex justify-center my-6 md:my-[50px]">
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            <Link to="/about" className="text-gray-500 text-sm font-bold hover:text-[#25D366] transition-colors">
+            <Link to="/about" className="text-gray-500 text-sm font-bold hover:text-[#E8943A] transition-colors">
               About
             </Link>
-            <Link to="/privacy" className="text-gray-500 text-sm font-bold hover:text-[#25D366] transition-colors whitespace-nowrap">
+            <Link to="/privacy" className="text-gray-500 text-sm font-bold hover:text-[#E8943A] transition-colors whitespace-nowrap">
               Privacy Policy
             </Link>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-gray-500 text-sm font-bold hover:text-[#25D366] transition-colors">
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-gray-500 text-sm font-bold hover:text-[#E8943A] transition-colors">
               Contact
             </a>
-            <a href="https://twitter.com/pricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-500 text-sm font-bold hover:text-[#25D366] transition-colors">
+            <a href="https://twitter.com/pricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-500 text-sm font-bold hover:text-[#E8943A] transition-colors">
               Twitter
             </a>
-            <a href="https://facebook.com/pricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-500 text-sm font-bold hover:text-[#25D366] transition-colors">
+            <a href="https://facebook.com/pricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-500 text-sm font-bold hover:text-[#E8943A] transition-colors">
               Facebook
             </a>
           </div>
