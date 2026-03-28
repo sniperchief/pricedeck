@@ -18,11 +18,11 @@ function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Text */}
           <div className="text-left">
-            <p className="overline mb-4">AI-POWERED MARKET INTELLIGENCE</p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <p className="overline mb-4" data-aos="fade-up">AI-POWERED MARKET INTELLIGENCE</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
               Know Market Price <span className="text-[#E8943A]">Before</span> <span className="text-[#E8943A]">You Budget or Buy</span>
             </h1>
-            <p className="text-gray-600 text-lg mb-8 max-w-lg">
+            <p className="text-gray-600 text-lg mb-8 max-w-lg" data-aos="fade-up" data-aos-delay="200">
               PriceDeck is WhatsApp-based tool that help shoppers check market prices for food and househood items across local market in Nigeria — Currently starting off in Enugu and expanding nation wide
             </p>
             <br></br>
@@ -31,17 +31,19 @@ function HeroSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-sm py-3 px-5 inline-flex items-center justify-center gap-2"
+              data-aos="fade-up"
+              data-aos-delay="300"
             >
-              
+
               Check Price
             </a>
           </div>
           {/* Right - iPhone Mockup */}
-          <div className="flex justify-center lg:justify-end mt-2 lg:mt-4">
+          <div className="flex justify-center lg:justify-end mt-2 lg:mt-4 overflow-hidden" data-aos="fade-left" data-aos-delay="200">
             <img
               src="/images/phone_mockup.png"
               alt="PriceDeck WhatsApp chat showing commodity prices"
-              className="max-w-none w-[450px] sm:w-[550px] md:w-[700px] lg:w-[850px] xl:w-[950px] h-auto drop-shadow-2xl"
+              className="w-full max-w-[450px] sm:max-w-[550px] md:max-w-[700px] lg:max-w-[850px] xl:max-w-[950px] h-auto drop-shadow-2xl"
             />
           </div>
         </div>
@@ -57,17 +59,17 @@ function AskPriceSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Text */}
           <div>
-            <p className="overline mb-4">FOR BUYERS</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
+            <p className="overline mb-4" data-aos="fade-up">FOR BUYERS</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
               Ask Any Price. Get the Full Market Picture.
             </h2>
-            <p className="text-white text-lg">
+            <p className="text-white text-lg" data-aos="fade-up" data-aos-delay="200">
               Send any price question in plain English or Pidgin. PriceDeck checks every market and returns a comparison sorted cheapest to most expensive — so you always know where to buy.
             </p>
           </div>
 
           {/* Right - Chat Visual */}
-          <div>
+          <div data-aos="fade-left" data-aos-delay="100">
             <div className="dark-card">
               <div className="chat-container">
                 {/* User Message */}
@@ -107,7 +109,7 @@ function HowItWorksSection() {
     <section id="how-it-works" className="section-padding bg-white">
       <div className="container-custom">
 
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <p className="overline mb-4">HOW IT WORKS</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             Get Real Market Prices in Seconds
@@ -119,7 +121,7 @@ function HowItWorksSection() {
         <div className="max-w-4xl mx-auto">
 
           {/* Step 1 */}
-          <div className="flex gap-6 md:gap-8 mb-12">
+          <div className="flex gap-6 md:gap-8 mb-12" data-aos="fade-up" data-aos-delay="100">
             <div className="flex flex-col items-center">
               <div className="w-10 h-10 rounded-full bg-[#E8943A] text-white flex items-center justify-center font-bold text-lg shrink-0">
                 1
@@ -136,7 +138,7 @@ function HowItWorksSection() {
           </div>
 <br></br><br></br>
           {/* Step 2 */}
-          <div className="flex gap-6 md:gap-8 mb-12">
+          <div className="flex gap-6 md:gap-8 mb-12" data-aos="fade-up" data-aos-delay="200">
             <div className="flex flex-col items-center">
               <div className="w-10 h-10 rounded-full bg-[#E8943A] text-white flex items-center justify-center font-bold text-lg shrink-0">
                 2
@@ -152,7 +154,7 @@ function HowItWorksSection() {
           </div>
 <br></br>
           {/* Step 3 */}
-          <div className="flex gap-6 md:gap-8 mb-12">
+          <div className="flex gap-6 md:gap-8 mb-12" data-aos="fade-up" data-aos-delay="300">
             <div className="flex flex-col items-center">
               <div className="w-10 h-10 rounded-full bg-[#E8943A] text-white flex items-center justify-center font-bold text-lg shrink-0">
                 3
@@ -168,7 +170,7 @@ function HowItWorksSection() {
           </div>
 <br></br>
           {/* Step 4 */}
-          <div className="flex gap-6 md:gap-8">
+          <div className="flex gap-6 md:gap-8" data-aos="fade-up" data-aos-delay="400">
             <div className="flex flex-col items-center">
               <div className="w-10 h-10 rounded-full bg-[#E8943A] text-white flex items-center justify-center font-bold text-lg shrink-0">
                 4
@@ -185,7 +187,7 @@ function HowItWorksSection() {
         </div>
 <br></br>
         {/* CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-16" data-aos="fade-up" data-aos-delay="500">
          
           <a
             href={WHATSAPP_LINK}
@@ -209,7 +211,7 @@ function SharePriceSection() {
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Visual (flipped layout) */}
-          <div className="relative order-2 lg:order-1">
+          <div className="relative order-2 lg:order-1" data-aos="fade-right">
             <img
               src="/images/market-woman.jpg"
               alt="Nigerian market woman at her stall with garri, rice or tomatoes displayed"
@@ -217,7 +219,7 @@ function SharePriceSection() {
             />
 
             {/* Floating Card */}
-            <div className="absolute top-6 right-6 bg-white rounded-xl p-4 shadow-xl max-w-[200px]">
+            <div className="absolute top-6 right-6 bg-white rounded-xl p-4 shadow-xl max-w-[200px]" data-aos="fade-up" data-aos-delay="300">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-[#C9952A] text-xl">✓</span>
                 <span className="font-semibold text-gray-900">Price Submitted</span>
@@ -230,14 +232,14 @@ function SharePriceSection() {
 
           {/* Right - Text */}
           <div className="order-1 lg:order-2">
-            <p className="overline mb-4">FOR MARKET PARTNERS</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#E8943A] leading-tight mb-6">
+            <p className="overline mb-4" data-aos="fade-up">FOR MARKET PARTNERS</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#E8943A] leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
               Share Prices. Reach More Buyers.
             </h2> <br></br>
-            <p className="text-[#E8943A] text-lg mb-8">
+            <p className="text-[#E8943A] text-lg mb-8" data-aos="fade-up" data-aos-delay="200">
               Are you a seller or market trader? Report your prices on PriceDeck in seconds. Buyers already on PriceDeck will see your prices and come to you.
             </p> <br></br>
-            <Link to="/market-partners" className="btn-primary text-sm py-3 px-5">
+            <Link to="/market-partners" className="btn-primary text-sm py-3 px-5" data-aos="fade-up" data-aos-delay="300">
               Become a Market Partner
             </Link>
           </div>
@@ -254,17 +256,17 @@ function PriceAlertsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Text */}
           <div>
-            <p className="overline mb-4">NEVER MISS A GOOD PRICE</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
+            <p className="overline mb-4" data-aos="fade-up">NEVER MISS A GOOD PRICE</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
               Set Alerts. Buy at the Right Time.
             </h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-lg" data-aos="fade-up" data-aos-delay="200">
               Tell PriceDeck when you want to be notified. When garri drops below your target price, we message you instantly on WhatsApp.
             </p>
           </div>
 
           {/* Right - Alert Card */}
-          <div>
+          <div data-aos="fade-left" data-aos-delay="100">
             <div className="dark-card">
               <div className="bg-white border border-gray-200 rounded-lg p-6">
                 <div className="flex items-center gap-3 mb-4">
@@ -329,13 +331,13 @@ function EverydayLifeSection() {
   return (
     <section className="section-padding bg-[#3D2517]">
       <div className="container-custom">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#F5E6C8] text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#F5E6C8] text-center mb-12" data-aos="fade-up">
           PriceDeck in Everyday Nigerian Life
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, index) => (
-            <div key={index} className="dark-card dark-card-hover p-0 overflow-hidden">
+            <div key={index} className="dark-card dark-card-hover p-0 overflow-hidden" data-aos="fade-up" data-aos-delay={index * 100}>
               {/* Photo with overlay */}
               <div className="relative">
                 <img
@@ -374,7 +376,7 @@ function StatsSection() {
       <div className="container-custom">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {stats.map((stat, index) => (
-            <div key={index} className="dark-card text-center">
+            <div key={index} className="dark-card text-center" data-aos="fade-up" data-aos-delay={index * 100}>
               <p className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{stat.value}</p>
               <p className="text-gray-500">{stat.label}</p>
             </div>
@@ -419,13 +421,13 @@ function FAQSection() {
     <section className="pt-20 md:pt-28 pb-[30px] bg-white">
       <div className="container-custom">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#20232D] mb-8 md:mb-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#20232D] mb-8 md:mb-12" data-aos="fade-up">
             Frequently Asked Questions
           </h2>
         <br></br>
           <div>
             {faqs.map((faq, index) => (
-              <div key={index} className="border-b border-gray-200 pb-8 mb-12 pt-8">
+              <div key={index} className="border-b border-gray-200 pb-8 mb-12 pt-8" data-aos="fade-up" data-aos-delay={index * 100}>
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full flex flex-row items-center justify-between py-4 gap-4"

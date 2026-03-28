@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
+import AOS from 'aos'
 import Home from './pages/Home'
 import MarketPartners from './pages/MarketPartners'
 import About from './pages/About'
@@ -136,31 +137,28 @@ function Navbar() {
 
 function Footer() {
   return (
-    <footer className="bg-gray-50 border-t border-gray-200">
-      <div className="container-custom py-8 md:py-12 lg:py-16">
-        <div className="flex justify-center my-6 md:my-[50px]">
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            <Link to="/about" className="text-gray-500 text-sm font-bold hover:text-[#E8943A] transition-colors">
-              About
-            </Link>
-            <Link to="/privacy" className="text-gray-500 text-sm font-bold hover:text-[#E8943A] transition-colors whitespace-nowrap">
-              Privacy Policy
-            </Link>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-gray-500 text-sm font-bold hover:text-[#E8943A] transition-colors">
-              Contact
-            </a>
-            <a href="https://twitter.com/pricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-500 text-sm font-bold hover:text-[#E8943A] transition-colors">
-              Twitter
-            </a>
-            <a href="https://facebook.com/pricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-500 text-sm font-bold hover:text-[#E8943A] transition-colors">
-              Facebook
-            </a>
-          </div>
+    <footer className="bg-[#0a0c0e]">
+      <div className="container-custom py-16 md:py-20">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-10">
+          <Link to="/about" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
+            About
+          </Link>
+          <Link to="/privacy" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
+            Privacy Policy
+          </Link>
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
+            Contact
+          </a>
+          <a href="https://twitter.com/pricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
+            Twitter
+          </a>
+          <a href="https://facebook.com/pricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
+            Facebook
+          </a>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-gray-200">
-          <p className="text-gray-400 text-xs md:text-sm text-center">
+        <div className="pt-8 border-t border-gray-800">
+          <p className="text-gray-500 text-sm text-center">
             &copy; 2025 PriceDeck. All rights reserved.
           </p>
         </div>
@@ -170,11 +168,19 @@ function Footer() {
 }
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out',
+    })
+  }, [])
+
   return (
     <Router>
-      <div className="min-h-screen flex flex-col overflow-x-hidden">
+      <div className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-1 overflow-x-hidden">
+        <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
