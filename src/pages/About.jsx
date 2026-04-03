@@ -26,19 +26,10 @@ export default function About() {
                 We started in Enugu because we know these markets. We're expanding across Nigeria because every Nigerian deserves to buy smarter.
               </p>
             </div>
-<br></br>
-            {/* Photo */}
-            <div className="mb-12">
-              <img
-                src="/images/about-market.jpg"
-                alt="Busy Nigerian market with market women, foodstuff, buyers and sellers"
-                className="w-full h-[400px] object-cover rounded-xl"
-              />
-            </div>
 
             {/* Contact */}
             <div className="text-center">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-xl font-semibold text-[#E8943A] mb-4">
                 Get in touch
               </h3>
               <a
