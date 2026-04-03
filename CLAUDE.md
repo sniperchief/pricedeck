@@ -15,13 +15,13 @@ No test framework is currently configured.
 
 ## Architecture Overview
 
-PriceDeck is a React + Vite marketing website for AI-powered commodity price intelligence in Nigeria. It's a frontend-only SPA deployed on Vercel with WhatsApp as the primary user interaction channel.
+PriceDeck is a React + Vite marketing website for AI-powered commodity price intelligence in Nigeria. It's a frontend-only SPA deployed on Render with WhatsApp as the primary user interaction channel.
 
 **Tech Stack:**
 - React 19 with React Router DOM for routing
 - Tailwind CSS 4 for styling
 - Vite 8 for build tooling
-- Deployed on Vercel (SPA rewrite in `vercel.json`)
+- Deployed on Render (SPA rewrite in `render.yaml`)
 
 **Project Structure:**
 ```
@@ -36,7 +36,7 @@ src/
     └── Privacy.jsx   # Privacy policy
 ```
 
-**Routing:** 4 routes (`/`, `/about`, `/market-partners`, `/privacy`) - all other paths rewrite to `/` via Vercel config.
+**Routing:** 4 routes (`/`, `/about`, `/market-partners`, `/privacy`) - all other paths rewrite to `/` via Render config.
 
 ## Styling Conventions
 

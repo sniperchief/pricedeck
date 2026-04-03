@@ -139,22 +139,30 @@ function Footer() {
   return (
     <footer className="bg-[#0a0c0e]">
       <div className="container-custom py-16 md:py-20">
-        <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-10">
-          <Link to="/about" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
-            About
-          </Link>
-          <Link to="/privacy" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
-            Privacy Policy
-          </Link>
-          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
-            Contact
-          </a>
-          <a href="https://twitter.com/pricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
-            Twitter
-          </a>
-          <a href="https://facebook.com/pricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
-            Facebook
-          </a>
+        <div className="flex flex-col md:flex-row md:justify-between gap-8 mb-10">
+          <div>
+            <h4 className="text-white text-sm font-semibold mb-2">Contact</h4>
+            <p className="text-gray-400 text-sm">
+              Flt14, NO 31 UGBENE II ABAKPA NIKE, ENUGU STATE.
+            </p>
+            <a href="mailto:support@pricedeck.xyz" className="text-gray-400 text-sm hover:text-[#E8943A] transition-colors">
+              support@pricedeck.xyz
+            </a>
+          </div>
+          <div className="flex flex-wrap gap-6 md:gap-10">
+            <Link to="/about" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
+              About
+            </Link>
+            <Link to="/privacy" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
+              Privacy Policy
+            </Link>
+            <a href="https://twitter.com/pricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
+              Twitter
+            </a>
+            <a href="https://facebook.com/pricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
+              Facebook
+            </a>
+          </div>
         </div>
 
         <div className="pt-8 border-t border-gray-800">
