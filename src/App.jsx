@@ -112,7 +112,7 @@ function WaitlistModal({ isOpen, onClose }) {
         </button>
 
         {isSuccess ? (
-          <div className="p-8 sm:p-10 text-center">
+          <div className="text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
               <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -122,7 +122,7 @@ function WaitlistModal({ isOpen, onClose }) {
             <p className="text-gray-600">We'll notify you when PriceDeck launches in Enugu.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="p-6 sm:p-8">
+          <form onSubmit={handleSubmit}>
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Join the Waitlist</h2>
             <p className="text-gray-500 mb-6">Be the first to know when we launch.</p>
 
