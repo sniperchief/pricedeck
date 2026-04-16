@@ -112,21 +112,21 @@ function WaitlistModal({ isOpen, onClose }) {
         </button>
 
         {isSuccess ? (
-          <div className="p-8 text-center">
-            <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="p-8 sm:p-10 text-center">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
+              <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">You're on the list!</h3>
-            <p className="text-gray-600 text-sm">We'll notify you when PriceDeck launches in Enugu.</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">You're on the list!</h3>
+            <p className="text-gray-600">We'll notify you when PriceDeck launches in Enugu.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="p-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-1">Join the Waitlist</h2>
-            <p className="text-gray-500 text-sm mb-6">Be the first to know when we launch.</p>
+          <form onSubmit={handleSubmit} className="p-6 sm:p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Join the Waitlist</h2>
+            <p className="text-gray-500 mb-6">Be the first to know when we launch.</p>
 
-            <div className="space-y-4">
+            <div className="space-y-5">
               <div>
                 <label className="form-label">Phone Number</label>
                 <input
@@ -160,20 +160,20 @@ function WaitlistModal({ isOpen, onClose }) {
                   name="location"
                   value={formData.location}
                   onChange={handleInputChange}
-                  placeholder="e.g. Independence Layout, Enugu"
+                  placeholder="e.g. Independence Layout"
                   className="form-input"
                 />
                 {errors.location && <p className="form-error">{errors.location}</p>}
               </div>
 
               <div>
-                <label className="form-label">What do you usually buy from Ogbete? <span className="font-normal text-gray-400">(optional)</span></label>
+                <label className="form-label">What do you usually buy? <span className="font-normal text-gray-400">(optional)</span></label>
                 <input
                   type="text"
                   name="foodItems"
                   value={formData.foodItems}
                   onChange={handleInputChange}
-                  placeholder="e.g. rice, tomatoes, garri, palm oil"
+                  placeholder="e.g. rice, tomatoes, garri"
                   className="form-input"
                 />
               </div>
@@ -183,7 +183,7 @@ function WaitlistModal({ isOpen, onClose }) {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`btn-primary w-full text-center ${isSubmitting ? 'btn-loading' : ''}`}
+                className={`btn-primary w-full text-center py-4 text-base ${isSubmitting ? 'btn-loading' : ''}`}
               >
                 {isSubmitting ? 'Joining...' : 'Join Waitlist'}
               </button>
