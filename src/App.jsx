@@ -6,9 +6,196 @@ import MarketPartners from './pages/MarketPartners'
 import About from './pages/About'
 import Privacy from './pages/Privacy'
 
-const WHATSAPP_LINK = 'https://wa.me/15551661013'
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw4zfgdtWM72riqbAstqfBeQ5FdAtzn36yE9wh9Bzh0cTnvZ4A7VlsBTteyUdwwoHQb/exec'
 
-function Navbar() {
+function WaitlistModal({ isOpen, onClose }) {
+  const [formData, setFormData] = useState({
+    phone: '',
+    email: '',
+    location: '',
+    foodItems: ''
+  })
+  const [errors, setErrors] = useState({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isOpen])
+
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') onClose()
+    }
+    if (isOpen) {
+      window.addEventListener('keydown', handleEscape)
+    }
+    return () => window.removeEventListener('keydown', handleEscape)
+  }, [isOpen, onClose])
+
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) onClose()
+  }
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }))
+    }
+  }
+
+  const validate = () => {
+    const newErrors = {}
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required'
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required'
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email'
+    }
+    if (!formData.location.trim()) {
+      newErrors.location = 'Location is required'
+    }
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    if (!validate()) return
+
+    setIsSubmitting(true)
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          phone: formData.phone,
+          email: formData.email,
+          location: formData.location,
+          foodItems: formData.foodItems ? [formData.foodItems] : [],
+          otherItems: ''
+        })
+      })
+      setIsSuccess(true)
+      setTimeout(() => {
+        onClose()
+        setIsSuccess(false)
+        setFormData({ phone: '', email: '', location: '', foodItems: '' })
+      }, 3000)
+    } catch (error) {
+      setErrors({ submit: 'Something went wrong. Please try again.' })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  if (!isOpen) return null
+
+  return (
+    <div className="modal-overlay" onClick={handleOverlayClick}>
+      <div className="modal-content">
+        <button className="modal-close" onClick={onClose} aria-label="Close modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+
+        {isSuccess ? (
+          <div className="p-8 text-center">
+            <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">You're on the list!</h3>
+            <p className="text-gray-600 text-sm">We'll notify you when PriceDeck launches in Enugu.</p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-1">Join the Waitlist</h2>
+            <p className="text-gray-500 text-sm mb-6">Be the first to know when we launch.</p>
+
+            <div className="space-y-4">
+              <div>
+                <label className="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder="08012345678"
+                  className="form-input"
+                />
+                {errors.phone && <p className="form-error">{errors.phone}</p>}
+              </div>
+
+              <div>
+                <label className="form-label">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="you@example.com"
+                  className="form-input"
+                />
+                {errors.email && <p className="form-error">{errors.email}</p>}
+              </div>
+
+              <div>
+                <label className="form-label">Where do you live in Enugu?</label>
+                <input
+                  type="text"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleInputChange}
+                  placeholder="e.g. Independence Layout, Enugu"
+                  className="form-input"
+                />
+                {errors.location && <p className="form-error">{errors.location}</p>}
+              </div>
+
+              <div>
+                <label className="form-label">What do you usually buy from Ogbete? <span className="font-normal text-gray-400">(optional)</span></label>
+                <input
+                  type="text"
+                  name="foodItems"
+                  value={formData.foodItems}
+                  onChange={handleInputChange}
+                  placeholder="e.g. rice, tomatoes, garri, palm oil"
+                  className="form-input"
+                />
+              </div>
+
+              {errors.submit && <p className="form-error">{errors.submit}</p>}
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`btn-primary w-full text-center ${isSubmitting ? 'btn-loading' : ''}`}
+              >
+                {isSubmitting ? 'Joining...' : 'Join Waitlist'}
+              </button>
+            </div>
+          </form>
+        )}
+      </div>
+    </div>
+  )
+}
+
+function Navbar({ onJoinWaitlist }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
@@ -62,14 +249,12 @@ function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={onJoinWaitlist}
             className="hidden md:block btn-primary text-sm py-3 px-5"
           >
-            Check Prices
-          </a>
+            Join Waitlist
+          </button>
 
           {/* Mobile Hamburger */}
           <button
@@ -176,6 +361,8 @@ function Footer() {
 }
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -184,19 +371,22 @@ function App() {
     })
   }, [])
 
+  const openWaitlistModal = () => setIsModalOpen(true)
+
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
-        <Navbar />
+        <Navbar onJoinWaitlist={openWaitlistModal} />
         <main className="flex-1">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home onJoinWaitlist={openWaitlistModal} />} />
             <Route path="/about" element={<About />} />
             <Route path="/market-partners" element={<MarketPartners />} />
             <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </main>
         <Footer />
+        <WaitlistModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
     </Router>
   )
