@@ -21,6 +21,7 @@ body {
   color: #1a1a1a;
   font-family: 'Plus Jakarta Sans', sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Custom utility classes */
