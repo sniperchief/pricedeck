@@ -26,7 +26,7 @@ function HeroSection({ onJoinWaitlist }) {
             </button>
           </div>
           {/* Right - iPhone Mockup */}
-          <div className="flex justify-center lg:justify-end mt-2 lg:mt-4 overflow-hidden" data-aos="fade-left" data-aos-delay="200">
+          <div className="flex justify-center lg:justify-end mt-2 lg:mt-4 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
             <img
               src="/images/phone_mockup.png"
               alt="PriceDeck WhatsApp chat showing commodity prices"
@@ -56,7 +56,7 @@ function AskPriceSection() {
           </div>
 
           {/* Right - Chat Visual */}
-          <div data-aos="fade-left" data-aos-delay="100">
+          <div data-aos="fade-up" data-aos-delay="100">
             <div className="dark-card">
               <div className="chat-container">
                 {/* User Message */}
@@ -194,7 +194,7 @@ function SharePriceSection() {
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Visual (flipped layout) */}
-          <div className="relative order-2 lg:order-1" data-aos="fade-right">
+          <div className="relative order-2 lg:order-1" data-aos="fade-up">
             <img
               src="/images/market-woman.jpg"
               alt="Nigerian market woman at her stall with garri, rice or tomatoes displayed"
@@ -249,7 +249,7 @@ function PriceAlertsSection() {
           </div>
 
           {/* Right - Alert Card */}
-          <div data-aos="fade-left" data-aos-delay="100">
+          <div data-aos="fade-up" data-aos-delay="100">
             <div className="dark-card">
               <div className="bg-white border border-gray-200 rounded-lg p-6">
                 <div className="flex items-center gap-3 mb-4">
