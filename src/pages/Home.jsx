@@ -401,7 +401,7 @@ function FAQSection() {
   }
 
   return (
-    <section className="pt-20 md:pt-28 pb-[30px] bg-white">
+    <section className="pt-20 md:pt-8 pb-[30px] bg-white">
       <div className="container-custom">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#20232D] mb-8 md:mb-12" data-aos="fade-up">
@@ -410,7 +410,7 @@ function FAQSection() {
         <br></br>
           <div>
             {faqs.map((faq, index) => (
-              <div key={index} className="border-b border-gray-200 pb-8 mb-12 pt-8" data-aos="fade-up" data-aos-delay={index * 100}>
+              <div key={index} className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6" data-aos="fade-up" data-aos-delay={index * 100}>
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full flex flex-row items-center justify-between py-4 gap-4"
