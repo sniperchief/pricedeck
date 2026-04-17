@@ -410,7 +410,13 @@ function FAQSection() {
         <br></br>
           <div>
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6" data-aos="fade-up" data-aos-delay={index * 100}>
+              <div key={index} className="" data-aos="fade-up" style={{
+                marginTop: '20px',
+                padding: '20px',
+                marginBottom: '25px',
+                borderBottom: '1px solid #e5e7eb'
+              }}
+              data-aos-delay={index * 100}>
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full flex flex-row items-center justify-between py-4 gap-4"
@@ -418,9 +424,15 @@ function FAQSection() {
                   <span className="text-[#20232D] font-bold text-xl md:text-2xl tracking-wide text-left">
                     {index + 1}. {faq.question}
                   </span>
-                  <span className="text-[#E8943A] text-3xl flex-shrink-0">
-                    {openIndex === index ? '−' : '+'}
-                  </span>
+                  <svg
+                    className="w-6 h-6 text-[#E8943A] flex-shrink-0 transition-transform duration-300"
+                    style={{ transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
                 </button>
                 {openIndex === index && (
                   <div className="pt-4 pb-2">

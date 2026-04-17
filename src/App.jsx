@@ -323,8 +323,8 @@ function Navbar({ onJoinWaitlist }) {
 function Footer() {
   return (
     <footer className="bg-[#0a0c0e]">
-      <div className="container-custom py-16 md:py-20">
-        <div className="flex flex-col md:flex-row md:justify-between gap-8 mb-10">
+      <div className="container-custom py-16 md:py-20" style={{paddingBottom: '150px'}}>
+        <div className="flex flex-col md:flex-row md:justify-between gap-8">
           <div>
             <h4 className="text-white text-sm font-semibold mb-2">Contact</h4>
             <p className="text-gray-400 text-sm">
@@ -349,12 +349,11 @@ function Footer() {
             </a>
           </div>
         </div>
-
-        <div className="pt-8 border-t border-gray-800">
-          <p className="text-gray-500 text-sm text-center">
-            &copy; 2025 PriceDeck. All rights reserved.
-          </p>
-        </div>
+      </div>
+      <div className="container-custom border-t border-gray-800 py-6">
+        <p className="text-gray-500 text-sm text-center">
+          &copy; 2025 PriceDeck. All rights reserved.
+        </p>
       </div>
     </footer>
   )
