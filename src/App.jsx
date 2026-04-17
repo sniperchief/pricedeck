@@ -6,7 +6,7 @@ import MarketPartners from './pages/MarketPartners'
 import About from './pages/About'
 import Privacy from './pages/Privacy'
 
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw4zfgdtWM72riqbAstqfBeQ5FdAtzn36yE9wh9Bzh0cTnvZ4A7VlsBTteyUdwwoHQb/exec'
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwqUqly2xSd1DEU4Sr4T5QLnpfuN0njfXp8z4JLQXV9j_QDvWcQWMCMFIPjm2SIX-bp/exec'
 
 function WaitlistModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
