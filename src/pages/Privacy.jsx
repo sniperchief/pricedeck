@@ -112,8 +112,8 @@ export default function Privacy() {
                 </h2>
                 <p>
                   If you have questions about this privacy policy or your data, contact us at{' '}
-                  <a href="mailto:pricedeck.org@gmail.com" className="text-[#25D366] hover:underline">
-                  pricedeck.org@gmail.com
+                  <a href="mailto:support@pricedeck.xzy" className="text-[#25D366] hover:underline">
+                  support@pricedeck.xzy
                   </a>
                 </p>
               </div>
