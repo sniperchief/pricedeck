@@ -36,7 +36,7 @@ export default function About() {
                 href="mailto:pricedeck.org@gmail.com"
                 className="text-[#25D366] text-lg hover:underline"
               >
-                Pricedeck.org@gmail.com
+                support@pricedeck.xyz
               </a>
             </div>
           </div>
