@@ -341,10 +341,10 @@ function Footer() {
             <Link to="/privacy" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
               Privacy Policy
             </Link>
-            <a href="https://twitter.com/pricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
+            <a href="https://twitter.com/usepricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
               Twitter
             </a>
-            <a href="https://facebook.com/pricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
+            <a href="https://facebook.com/usepricedeck" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-semibold hover:text-[#E8943A] transition-colors">
               Facebook
             </a>
           </div>
