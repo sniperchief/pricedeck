@@ -1,47 +1,52 @@
 export default function About() {
   return (
-    <>
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="max-w-[680px] mx-auto">
-            <p className="overline mb-4">OUR STORY</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-[#E8943A] mb-8">
-              Built for Every Nigerian Market
-            </h1>
-<br></br>
-            <div className="space-y-6 text-white font-bold text-lg leading-relaxed mb-12">
-              <p>
-                In Nigeria, knowing the right price can make or break your budget. Whether you're a family buying food for the week, a small business restocking supplies, or a builder sourcing materials — you deserve to know what things actually cost before you go to market.
-              </p>
+    <section className="section-padding bg-white">
+      <div className="container-custom">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">About PriceDeck</h1>
+          <p className="text-gray-500 mb-8">Foodstuff shopping made simple</p>
 
+          <div className="space-y-8 text-gray-600">
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 mb-4">The Problem</h2>
               <p>
-                But market prices change constantly. What costs ₦15,000 at Ogbete might be ₦18,000 at New Market. The only way to know was to physically visit multiple markets or call around — until now.
+                Shopping for foodstuff in Nigerian markets is stressful. The crowds, the heat, the haggling, and never knowing if you're paying the right price. For busy people, finding time for market runs is a constant struggle.
               </p>
+            </section>
 
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 mb-4">Our Solution</h2>
               <p>
-                PriceDeck was built to solve this. We work with market traders and agents across Nigerian markets who report real prices in real time. Our AI verifies these prices and makes them available to anyone — free on WhatsApp.
+                PriceDeck is a WhatsApp shopping assistant that handles your foodstuff shopping. Check real market prices, place orders, pay online, and get everything delivered to your doorstep — all through a simple WhatsApp chat.
               </p>
+            </section>
 
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 mb-4">How We Work</h2>
               <p>
-                We started in Enugu because we know these markets. We're expanding across Nigeria because every Nigerian deserves to buy smarter.
+                We source directly from Ogbete Main Market in Enugu, ensuring you get fresh items at real market prices. No markup surprises, no hidden fees — just transparent pricing and reliable delivery.
               </p>
-            </div>
+            </section>
 
-            {/* Contact */}
-            <div className="text-center">
-              <h3 className="text-xl font-semibold text-[#E8943A] mb-4">
-                Get in touch
-              </h3>
-              <a
-                href="mailto:pricedeck.org@gmail.com"
-                className="text-[#25D366] text-lg hover:underline"
-              >
-                support@pricedeck.xyz
-              </a>
-            </div>
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 mb-4">Our Vision</h2>
+              <p>
+                We started in Enugu, but we're building for every Nigerian who wants to skip market stress. Fresh foodstuff, fair prices, delivered to your door.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 mb-4">Contact Us</h2>
+              <p>
+                Have questions or feedback? Reach out to us at{' '}
+                <a href="mailto:support@pricedeck.xyz" className="text-[#E8943A] hover:underline">
+                  support@pricedeck.xyz
+                </a>
+              </p>
+            </section>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }
