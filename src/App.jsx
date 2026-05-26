@@ -197,7 +197,7 @@ function Footer() {
             &copy; 2025 PriceDeck. All rights reserved.
           </p>
           <p className="text-gray-600 text-xs text-center md:text-right">
-            Operated by PriceDeck Ventures
+            Operated by PriceDeck Concepts
           </p>
         </div>
       </div>
