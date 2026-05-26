@@ -129,14 +129,6 @@ function Navbar() {
               >
                 How It Works
               </a>
-              <a
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary text-sm py-3 px-5 inline-flex items-center justify-center gap-2 w-fit"
-              >
-                Order Now
-              </a>
             </div>
           </div>
         )}
