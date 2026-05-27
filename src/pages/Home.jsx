@@ -5,10 +5,10 @@ const WHATSAPP_LINK = 'https://wa.me/15551661013'
 function HeroSection() {
   return (
     <section className="section-padding" style={{background: 'linear-gradient(to bottom, #ffffff 0%, #ffffff 70%, #E8943A 100%)'}}>
-      <div className="container-custom">
-        <div className="max-w-3xl mx-auto text-center">
+      <div className="container-custom flex justify-center">
+        <div className="max-w-2xl text-center">
           <p className="overline mb-4" data-aos="fade-up">REAL PRICES. NO STRESS.</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-relaxed md:leading-snug tracking-wide mb-6" data-aos="fade-up" data-aos-delay="100">
             Order Foodstuff on WhatsApp <span className="text-[#E8943A]">Without Market Stress</span>
           </h1>
           <p className="text-gray-600 text-lg mb-8 mx-auto max-w-2xl text-justify" data-aos="fade-up" data-aos-delay="200">
@@ -209,8 +209,8 @@ function TestimonialsSection() {
 function FinalCTASection() {
   return (
     <section className="section-padding bg-[#0a0c0e]">
-      <div className="container-custom">
-        <div className="max-w-2xl mx-auto text-center">
+      <div className="container-custom flex justify-center">
+        <div className="max-w-2xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" data-aos="fade-up">
             Know the real price before you buy.
           </h2>
