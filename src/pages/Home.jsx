@@ -1,6 +1,5 @@
 import { useState } from 'react'
-
-const WHATSAPP_LINK = 'https://wa.me/15551661013'
+import { WHATSAPP_LINK } from '../constants'
 
 function HeroSection() {
   return (
